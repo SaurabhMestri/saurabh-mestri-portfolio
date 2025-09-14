@@ -10,6 +10,7 @@ import {
 } from "./utils";
 import BlurBlob from "./components/BlurBlob";
 import Work from "./components/Projects/Projects";
+import ProjectList from "./components/Projects/Projects";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Skills />
         {/* <Experience /> */}
         {/* <Work/> */}
+        <ProjectList/>
         <Education />
         <Contact />
         <Footer />
