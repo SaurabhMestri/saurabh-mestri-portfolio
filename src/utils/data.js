@@ -33,16 +33,6 @@ import newtonschoolLogo from '../assets/company_logo/newtonschool_logo.png';
 import bca from '../assets/education_logo/asp.png'
 import maharastraBoard from '../assets/education_logo/maharastra board.jpeg';
 
-// Project Section Logo's
-import githubdetLogo from '../assets/work_logo/github_det.png';
-import csprepLogo from '../assets/work_logo/cs_prep.png';
-import movierecLogo from '../assets/work_logo/movie_rec.png';
-import taskremLogo from '../assets/work_logo/task_rem.png';
-import npmLogo from '../assets/work_logo/npm.png';
-import webverLogo from '../assets/work_logo/web_dig.png';
-import cmLogo from '../assets/work_logo/cm.png';
-import imagesearchLogo from '../assets/work_logo/image_search.png';
-import removebgLogo from '../assets/work_logo/remove_bg.png';
 
 
 export const SkillsInfo = [
@@ -186,7 +176,6 @@ export const SkillsInfo = [
       title: "Assal Konkani",
       description:
         "Built a frontend e-commerce platform with Next.js, shadcn/ui, Tailwind CSS, and MongoDB, delivering a responsive and modern shopping experience.",
-      image: githubdetLogo,
       tags: ["HTML", "CSS", "JavaScript", "API" ,"Tailwind CSS", "Next JS", "MongoDB"],
       webapp: " https://assal-kokani.vercel.app/"
 
@@ -196,7 +185,7 @@ export const SkillsInfo = [
       title: "Portfolio",
       description:
         "Developed a responsive portfolio site to showcase projects and skills with a clean and modern UI.",
-      image: csprepLogo,
+      
       tags: ["React JS", "Tailwind CSS","Javascript","EmailJS"],
       github: "https://github.com/codingmastr/CSPrep",
       webapp: "https://csprep.netlify.app/",
