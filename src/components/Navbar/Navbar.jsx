@@ -1,13 +1,17 @@
 import React, { useState, useEffect } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import useTheme from "../../context/theme";
+import { FaSun, FaMoon } from "react-icons/fa";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("");
   const [isScrolled, setIsScrolled] = useState(false);
+  const { themeMode, darkTheme, lightTheme,} = useTheme();
 
-  // Detect scroll and change navbar background
+  
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
@@ -31,35 +35,33 @@ const Navbar = () => {
   const menuItems = [
     { id: "about", label: "About" },
     { id: "skills", label: "Skills" },
-    { id: "experience", label: "Experience" },
-    { id: "work", label: "Projects" },
+    // { id: "experience", label: "Experience" },
+    { id: "projects", label: "Projects" },
     { id: "education", label: "Education" },
   ];
 
   return (
     <nav
-      className={`fixed top-0 w-full z-50 transition duration-300 px-[7vw] md:px-[7vw] lg:px-[20vw] ${
-        isScrolled ? " bg-opacity-50 backdrop-blur-md shadow-md" : "bg-transparent"
-      }`}
+      className={`fixed top-0 w-full z-50 transition duration-300 px-[7vw] md:px-[7vw] lg:px-[20vw] ${isScrolled ? " bg-opacity-50 backdrop-blur-md shadow-md" : "bg-transparent"
+        }`}
     >
-      <div className="text-white py-5 flex justify-between items-center">
+      <div className=" py-5 flex justify-between items-center">
         {/* Logo */}
         <div className="text-lg font-semibold cursor-pointer">
           <span className="text-orange-500">&lt;</span>
-          <span className="text-white">Saurabh</span>
+          <span className="">Saurabh</span>
           <span className="text-orange-500">/</span>
-          <span className="text-white">Mestri</span>
+          <span >Mestri</span>
           <span className="text-orange-500">&gt;</span>
         </div>
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex space-x-8 text-gray-300">
+        <ul className="hidden md:flex space-x-8 ">
           {menuItems.map((item) => (
             <li
               key={item.id}
-              className={`cursor-pointer hover:text-orange-500 ${
-                activeSection === item.id ? "text-orange-500" : ""
-              }`}
+              className={`cursor-pointer hover:text-orange-500 ${activeSection === item.id ? "text-orange-500" : ""
+                }`}
             >
               <button onClick={() => handleMenuItemClick(item.id)}>
                 {item.label}
@@ -68,13 +70,25 @@ const Navbar = () => {
           ))}
         </ul>
 
+
+        <button
+          onClick={() =>
+            themeMode === "light" ? darkTheme() : lightTheme()
+          }
+          className="px-2 py-1 rounded flex items-center gap-2 hover:bg-rose-600 transition"
+        >
+          {themeMode}
+          {themeMode === "light" ? (<FaMoon size={15}/>) : (<FaSun size={15}/>)}
+        </button>
+
+
         {/* Social Icons */}
         <div className="hidden md:flex space-x-4">
           <a
-            href=""
+            href="https://github.com/SaurabhMestri"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-300 hover:text-orange-500"
+            className=" hover:text-orange-500"
           >
             <FaGithub size={24} />
           </a>
@@ -82,7 +96,7 @@ const Navbar = () => {
             href=""
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-300 hover:text-blue-500"
+            className=" hover:text-blue-500"
           >
             <FaLinkedin size={24} />
           </a>
@@ -107,13 +121,12 @@ const Navbar = () => {
       {/* Mobile Menu Items */}
       {isOpen && (
         <div className="bg-transparent absolute top-16 left-1/2 transform -translate-x-1/2 w-4/5 bg-opacity-50 backdrop-filter backdrop-blur-lg z-50 rounded-lg shadow-lg md:hidden">
-          <ul className="flex flex-col items-center space-y-4 py-4 text-gray-300 ">
+          <ul className="flex flex-col items-center space-y-4 py-4  ">
             {menuItems.map((item) => (
               <li
                 key={item.id}
-                className={`cursor-pointer hover:text-white ${
-                  activeSection === item.id ? "text-[#8245ec]" : ""
-                }`}
+                className={`cursor-pointer hover:text-white ${activeSection === item.id ? "text-rose-600" : ""
+                  }`}
               >
                 <button onClick={() => handleMenuItemClick(item.id)}>
                   {item.label}

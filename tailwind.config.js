@@ -5,6 +5,7 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}", // Tell Tailwind to scan your files
   ],
+  darkMode: "class",
   theme: {
     extend: {
       animation: {

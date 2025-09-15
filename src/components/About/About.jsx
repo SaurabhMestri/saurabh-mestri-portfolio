@@ -5,15 +5,15 @@ const About = () => {
   return (
     <section
       id="about"
-      className="fade-in py-4 px-10 md:px-50 lg:px-50 font-sans pb-20 lg:pb-20 pt-20 sm:pt-10 md:pt-20 lg:pt-35 "
+      className="fade-in py-4 px-10 md:px-50 lg:px-50 font-sans pb-20 lg:pb-20 pt-20 sm:pt-10 md:pt-20 lg:pt-35 not-dark:bg-amber-400 "
     >
       <div className="flex flex-col-reverse md:flex-row justify-between items-center">
         <div className="md:w-1/2 text-center md:text-left mt-8 md:mt-0">
-          <h1 className="text-xl sm:text-4xl md:text-2xl font-bold text-white mb-2 leading-tight">
+          <h1 className="text-xl sm:text-4xl md:text-2xl font-bold mb-2 leading-tight">
             Hi, I am
           </h1>
           {/* Name */}
-          <h2 className="text-2xl sm:text-5xl md:text-4xl font-bold text-white mb-1 lg:mb-4 leading-tight">
+          <h2 className="text-2xl sm:text-5xl md:text-4xl font-bold mb-1 lg:mb-4 leading-tight">
            Saurabh Mestri
           </h2>
           {/* Skills */}
@@ -21,7 +21,7 @@ const About = () => {
             Front-End Developer | Coder
           </h3>
           {/* About Me Paragraph */}
-          <p className="text-base sm:text-lg md:text-lg text-gray-400 lg:mb-10 mt-2 lg:mt-8 leading-relaxed">
+          <p className="text-base sm:text-lg md:text-lg lg:mb-10 mt-2 lg:mt-8 leading-relaxed">
            I am a passionate Frontend Developer eager to begin my career in creating responsive and user-friendly web applications. Skilled in modern technologies like HTML, CSS, JavaScript, React, and Next.js, I focus on building clean, efficient, and visually appealing user interfaces
           </p>
           {/* Resume Button */}
@@ -29,10 +29,10 @@ const About = () => {
             href="https://drive.google.com/file/d/154yFnFIXjH6ioQlqesCyRDZLwiX7QHH6/view?usp=sharing"
             target="_blank" 
             rel="noopener noreferrer"
-            className="inline-block text-white px-1.5 py-2 lg:py-3 lg:px-8 rounded-full mt-5 text-sm font-bold transition duration-300 transform hover:scale-105"
+            className="inline-block px-2 py-2 lg:py-3 lg:px-8 rounded-full mt-5 text-sm font-bold transition duration-300 transform hover:scale-105"
             style={{
               background: "linear-gradient(90deg, orange, #a855f7)",
-              boxShadow: "0 0 2px #8245ec, 0 0 2px #8245ec, 0 0 40px #8245ec",
+              boxShadow: "0 0 2px #8245ec, 0 0 5px #8245ec, 0 0 40px #8245ec",
             }}
           >
             DOWNLOAD CV

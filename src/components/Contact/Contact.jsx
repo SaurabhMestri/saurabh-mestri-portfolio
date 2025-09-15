@@ -43,23 +43,23 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="flex flex-col items-center justify-center py-24 px-[12vw] md:px-[7vw] lg:px-[20vw] bg-[#0b0917]"
+      className="flex flex-col items-center justify-center py-24 px-[12vw] md:px-[7vw] lg:px-[20vw] bg-skills-gradient clip-path-custom"
     >
       {/* Toast Container */}
       <ToastContainer />
 
       {/* Section Title */}
       <div className="text-center mb-12">
-        <h2 className="text-4xl font-bold text-white">📩 Contact Me</h2>
+        <h2 className="text-4xl font-bold">📩 Contact Me</h2>
         <div className="w-20 h-1 bg-purple-500 mx-auto mt-4 rounded-full"></div>
-        <p className="text-gray-400 mt-4 text-lg">
+        <p className=" mt-4 text-lg">
           I’d love to hear from you! Whether it’s a project, collaboration, or
           just a friendly hello. 🚀
         </p>
       </div>
 
       {/* Contact Form */}
-      <div className="w-full max-w-lg bg-[#131025] p-8 rounded-xl shadow-xl border border-gray-700 backdrop-blur-sm">
+      <div className="w-full max-w-lg  p-8 rounded-xl shadow-xl border border-gray-700 backdrop-blur-sm">
         <form
           ref={form}
           onSubmit={sendEmail}
@@ -70,28 +70,28 @@ const Contact = () => {
             name="user_name"
             placeholder="Your Name"
             required
-            className="w-full p-3 rounded-lg bg-[#0d0a1a] text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-purple-500"
+            className="w-full p-3 rounded-lg  border  border-gray-600 focus:outline-none focus:ring-2 focus:ring-rose-600"
           />
           <input
             type="email"
             name="user_email"
             placeholder="Your Email"
             required
-            className="w-full p-3 rounded-lg bg-[#0d0a1a] text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-purple-500"
+            className="w-full p-3 rounded-lg  border  border-gray-600 focus:outline-none focus:ring-2 focus:ring-rose-600"
           />
           <input
             type="text"
             name="subject"
             placeholder="Subject"
             required
-            className="w-full p-3 rounded-lg bg-[#0d0a1a] text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-purple-500"
+            className="w-full p-3 rounded-lg  border  border-gray-600 focus:outline-none focus:ring-2 focus:ring-rose-600"
           />
           <textarea
             name="message"
             placeholder="Message"
             rows="5"
             required
-            className="w-full p-3 rounded-lg bg-[#0d0a1a] text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-purple-500"
+            className="w-full p-3 rounded-lg  border  border-gray-600 focus:outline-none focus:ring-2 focus:ring-rose-600"
           />
 
           {/* Send Button */}
@@ -102,7 +102,7 @@ const Contact = () => {
               ${
                 isSending
                   ? "bg-gray-600 cursor-not-allowed"
-                  : "bg-gradient-to-r from-purple-600 to-pink-500 hover:scale-105 text-white shadow-lg"
+                  : "bg-gradient-to-r from-purple-600 to-pink-500 hover:scale-105  shadow-lg"
               }`}
           >
             {isSending ? "Sending..." : "Send Message 🚀"}

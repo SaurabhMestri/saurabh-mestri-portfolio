@@ -8,5 +8,4 @@ import Education from '../components/Education/Education'
 import Experience from "../components/Experience/Experience";
 
 
-
 export {Navbar,Footer,About,Contact,Skills,Work,Education,Experience}

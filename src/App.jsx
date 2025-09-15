@@ -1,4 +1,4 @@
-import React from "react";
+import React, {  useEffect, useState } from "react";
 import {
   Navbar,
   Footer,
@@ -6,15 +6,29 @@ import {
   Contact,
   Skills,
   Education,
-  Experience,
 } from "./utils";
 import BlurBlob from "./components/BlurBlob";
-import Work from "./components/Projects/Projects";
 import ProjectList from "./components/Projects/Projects";
+import { ThemeProdiver } from "./context/theme";
 
 function App() {
+  const [themeMode, setThemeMode ] = useState("light");
+  
+  const darkTheme = () => setThemeMode("dark");
+  const lightTheme = () => setThemeMode("light");
+  const toggleTheme = () => {
+    setThemeMode((prev) => (prev === "light" ? "dark" : "light"));
+  };
+
+  useEffect(() => {
+    document.querySelector("html").classList.remove("light","dark");
+    document.querySelector("html").classList.add(themeMode);
+  },[themeMode])
   return (
-    <div className="bg-[#050414] text-white">
+    <>
+    <ThemeProdiver value={{themeMode,toggleTheme ,darkTheme,lightTheme}}>
+
+    <div >
       <BlurBlob
         position={{ top: "35%", left: "20%" }}
         size={{ width: "30%", height: "40%" }}
@@ -32,6 +46,8 @@ function App() {
         <Footer />
       </div>
     </div>
+    </ThemeProdiver>
+    </>
   );
 }
 
