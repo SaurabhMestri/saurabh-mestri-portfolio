@@ -177,7 +177,7 @@ export const SkillsInfo = [
       description:
         "Built a frontend e-commerce platform with Next.js, shadcn/ui, Tailwind CSS, and MongoDB, delivering a responsive and modern shopping experience.",
       tags: ["HTML", "CSS", "JavaScript", "API" ,"Tailwind CSS", "Next JS", "MongoDB"],
-      webapp: " https://assal-kokani.vercel.app/"
+      webapp: "https://assal-kokani.vercel.app/"
 
     },
     {
@@ -187,8 +187,7 @@ export const SkillsInfo = [
         "Developed a responsive portfolio site to showcase projects and skills with a clean and modern UI.",
       
       tags: ["React JS", "Tailwind CSS","Javascript","EmailJS"],
-      github: "https://github.com/codingmastr/CSPrep",
-      webapp: "https://csprep.netlify.app/",
+      webapp: "https://saurabh-mestri-portfolio.vercel.app/",
     },
     
   ];  
