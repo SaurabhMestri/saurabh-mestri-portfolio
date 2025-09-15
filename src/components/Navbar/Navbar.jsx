@@ -73,12 +73,12 @@ const Navbar = () => {
 
         <button
           onClick={() =>
-            themeMode === "light" ? darkTheme() : lightTheme()
+            themeMode === "dark" ? lightTheme() : darkTheme()
           }
           className="px-2 py-1 rounded flex items-center gap-2 hover:bg-rose-600 transition"
         >
           {themeMode}
-          {themeMode === "light" ? (<FaMoon size={15}/>) : (<FaSun size={15}/>)}
+          {themeMode === "dark" ? (<FaMoon size={15}/>) : (<FaSun size={15}/>)}
         </button>
 
 

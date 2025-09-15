@@ -12,7 +12,7 @@ import ProjectList from "./components/Projects/Projects";
 import { ThemeProdiver } from "./context/theme";
 
 function App() {
-  const [themeMode, setThemeMode ] = useState("light");
+  const [themeMode, setThemeMode ] = useState("dark");
   
   const darkTheme = () => setThemeMode("dark");
   const lightTheme = () => setThemeMode("light");
