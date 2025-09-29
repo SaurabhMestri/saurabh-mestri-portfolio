@@ -10,7 +10,7 @@ const About = () => {
       <div className="flex flex-col-reverse md:flex-row justify-between items-center">
         <div className="md:w-1/2 text-center md:text-left mt-8 md:mt-0">
           <h1 className="text-xl sm:text-4xl md:text-2xl font-bold mb-2 leading-tight">
-            Hi, I am
+            Hello, My self
           </h1>
           {/* Name */}
           <h2 className="text-2xl sm:text-5xl md:text-4xl font-bold mb-1 lg:mb-4 leading-tight">
